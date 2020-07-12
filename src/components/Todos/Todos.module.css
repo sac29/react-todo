@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.actions {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.dateadded {
+  padding-right: 40px;
+}
+
+.heading {
+  font-weight: 600;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.pr {
+  padding-right: 12px;
+}
+
+.bold {
+  font-weight: 600;
+}
