@@ -123,7 +123,7 @@ class Todos extends React.Component {
                     </Col>
                     <Col xs={22}>
                         <span className={styles.pr}>Total tasks : <span className={styles.bold}>{this.props.todos.length}</span> </span>
-                        <span className={styles.pr}>Total Remaining : <span className={styles.bold}>{this.props.todos.filter(t => !t.isCompleted).length}</span> </span>
+                        <span className={styles.pr}>Tasks Remaining : <span className={styles.bold}>{this.props.todos.filter(t => !t.isCompleted).length}</span> </span>
                         <span>Tasks Completed: <span className={styles.bold}>{this.props.todos.filter(t => t.isCompleted).length}</span></span>
                     </Col>
                 </Row>
