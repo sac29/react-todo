@@ -118,10 +118,10 @@ class Todos extends React.Component {
         return (
             <>
                 <Row align={"middle"}>
-                    <Col xs={2}>
+                    <Col lg={2}>
                         <Button onClick={this.addTodo} type="primary">Add Todo</Button>
                     </Col>
-                    <Col xs={22}>
+                    <Col lg={22}>
                         <span className={styles.pr}>Total tasks : <span className={styles.bold}>{this.props.todos.length}</span> </span>
                         <span className={styles.pr}>Tasks Remaining : <span className={styles.bold}>{this.props.todos.filter(t => !t.isCompleted).length}</span> </span>
                         <span>Tasks Completed: <span className={styles.bold}>{this.props.todos.filter(t => t.isCompleted).length}</span></span>
