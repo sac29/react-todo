@@ -57,7 +57,6 @@ class Todos extends React.Component {
     }
 
     handleDateChange = (date) => {
-        debugger;
         const newTodo = { ...this.state.newTodo };
         if (date) {
             newTodo['dateAdded'] = date.format(dateFormat);
@@ -118,12 +117,13 @@ class Todos extends React.Component {
 
         return (
             <>
-                <Row className="align-items-center">
+                <Row align={"middle"}>
                     <Col xs={2}>
                         <Button onClick={this.addTodo} type="primary">Add Todo</Button>
                     </Col>
-                    <Col xs={9}>
+                    <Col xs={22}>
                         <span className={styles.pr}>Total tasks : <span className={styles.bold}>{this.props.todos.length}</span> </span>
+                        <span className={styles.pr}>Total Remaining : <span className={styles.bold}>{this.props.todos.filter(t => !t.isCompleted).length}</span> </span>
                         <span>Tasks Completed: <span className={styles.bold}>{this.props.todos.filter(t => t.isCompleted).length}</span></span>
                     </Col>
                 </Row>
