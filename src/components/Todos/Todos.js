@@ -6,6 +6,12 @@ import { List, Button, Row, Col } from 'antd';
 import { createTodoItem, markTodoAsDone, editTodo, deleteTodo } from '../../store/actions/todoActions';
 import styles from './Todos.module.css';
 import ModalDialog from '../Modal/ModalDialog';
+// import moduleName from '../Formik/Sigup';
+import SignupForm from '../Formik/Sigup';
+import RenderProps from '../RenderProps/RenderProps';
+import Counter from '../RenderProps/Counter';
+import ClickCounter from '../HOC/ClickCounter';
+import HoverCounter from '../HOC/HoverCounter';
 
 const dateFormat = 'YYYY/MM/DD';
 
@@ -125,6 +131,31 @@ class Todos extends React.Component {
                         <span className={styles.pr}>Total tasks : <span className={styles.bold}>{this.props.todos.length}</span> </span>
                         <span className={styles.pr}>Tasks Remaining : <span className={styles.bold}>{this.props.todos.filter(t => !t.isCompleted).length}</span> </span>
                         <span>Tasks Completed: <span className={styles.bold}>{this.props.todos.filter(t => t.isCompleted).length}</span></span>
+                    </Col>
+                </Row>
+                <Row>
+                    {/* <Col>
+                        <Counter
+                            render={(count, incrementCount) => (
+                                <ClickCounter count={count} incrementCount={incrementCount} />
+                            )}
+                        />
+                        <Counter
+                            render={(count, incrementCount) => (
+                                <HoverCounter count={count} incrementCount={incrementCount} />
+                            )}
+                        />
+                        <SignupForm />
+                    </Col> */}
+                </Row>
+                <Row>
+                    <Col>
+                        <ClickCounter name="sac"
+                        />
+                        <HoverCounter
+                        />
+                        <SignupForm />
+                        {/* <RenderProps render = { (isLoggedIn) => isLoggedIn ? 'Sachin' : 'Guest'}/> */}
                     </Col>
                 </Row>
                 <ModalDialog
